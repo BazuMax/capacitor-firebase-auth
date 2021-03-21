@@ -1,6 +1,6 @@
 {
-  "name": "capacitor-firebase-auth",
-  "version": "0.0.1",
+  "name": "@bazumax/capacitor-firebase-auth",
+  "version": "3.0.0-beta.1",
   "description": "npm init @capacitor/plugin",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -46,7 +46,7 @@
   "devDependencies": {
     "@capacitor/android": "next",
     "@capacitor/core": "next",
-    "@capacitor/docgen": "^0.0.10",
+    "@capacitor/docgen": "^0.0.16",
     "@capacitor/ios": "next",
     "@ionic/eslint-config": "^0.3.0",
     "@ionic/prettier-config": "^1.0.1",
@@ -57,7 +57,7 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.32.0",
     "swiftlint": "^1.0.1",
-    "typescript": "~4.0.3"
+    "typescript": "~4.1.5"
   },
   "peerDependencies": {
     "@capacitor/core": "next"
@@ -74,5 +74,8 @@
     "android": {
       "src": "android"
     }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

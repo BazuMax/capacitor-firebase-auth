@@ -9,10 +9,9 @@ import Capacitor
 public class FirebaseAuthPlugin: CAPPlugin {
     private let implementation = FirebaseAuth()
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+    @objc func getClaims(_ call: CAPPluginCall) {
+        implementation.getClaims { (claims: [String : Any]) in
+            call.resolve([ "claims": claims])
+        }
     }
 }

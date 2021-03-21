@@ -1,7 +1,10 @@
 import Foundation
+import FirebaseAuth
 
 @objc public class FirebaseAuth: NSObject {
-    @objc public func echo(_ value: String) -> String {
-        return value
+    @objc public func getClaims(completion:@escaping ([String : Any])->()) {
+        Auth.auth().currentUser?.getIDTokenResult(completion: { (result, error) in
+            completion(result?.claims ?? [:])
+        })
     }
 }

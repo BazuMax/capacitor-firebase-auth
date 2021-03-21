@@ -11,9 +11,49 @@ npx cap sync
 
 ## API
 
-<docgen-index></docgen-index>
+<docgen-index>
+
+* [`getClaims()`](#getclaims)
+* [Interfaces](#interfaces)
+* [Type Aliases](#type-aliases)
+
+</docgen-index>
 
 <docgen-api>
-<!-- run docgen to generate docs from the source -->
-<!-- More info: https://github.com/ionic-team/capacitor-docgen -->
+<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+
+### getClaims()
+
+```typescript
+getClaims() => Promise<ClaimsResult>
+```
+
+Returns the custom claims (set by developer via Admin SDK).
+
+**Returns:** <code>Promise&lt;<a href="#claimsresult">ClaimsResult</a>&gt;</code>
+
+**Since:** 3.0.0
+
+--------------------
+
+
+### Interfaces
+
+
+#### ClaimsResult
+
+| Prop         | Type                                                             |
+| ------------ | ---------------------------------------------------------------- |
+| **`claims`** | <code><a href="#record">Record</a>&lt;string, boolean&gt;</code> |
+
+
+### Type Aliases
+
+
+#### Record
+
+Construct a type with a set of properties K of type T
+
+<code>{ [P in K]: T; }</code>
+
 </docgen-api>
