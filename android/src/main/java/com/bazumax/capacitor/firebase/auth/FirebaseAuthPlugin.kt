@@ -7,7 +7,7 @@ import com.getcapacitor.PluginMethod
 import com.getcapacitor.annotation.CapacitorPlugin
 
 
-@CapacitorPlugin(name = "FirebaseAuthPlugin")
+@CapacitorPlugin(name = "FirebaseAuth")
 class FirebaseAuthPlugin : Plugin() {
     private val implementation = FirebaseAuth()
 
