@@ -10,7 +10,7 @@ public class FirebaseAuthPlugin: CAPPlugin {
     private let implementation = FirebaseAuth()
 
     @objc func getClaims(_ call: CAPPluginCall) {
-        implementation.getClaims { (claims: [String : Any]) in
+        implementation.getClaims { (claims: [String: Any]) in
             call.resolve([ "claims": claims])
         }
     }
