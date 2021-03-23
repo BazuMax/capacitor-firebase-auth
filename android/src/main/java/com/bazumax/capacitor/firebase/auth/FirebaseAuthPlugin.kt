@@ -6,16 +6,14 @@ import com.getcapacitor.PluginCall
 import com.getcapacitor.PluginMethod
 import com.getcapacitor.annotation.CapacitorPlugin
 
-
 @CapacitorPlugin(name = "FirebaseAuth")
-class FirebaseAuthPlugin : Plugin() {
+public class FirebaseAuthPlugin : Plugin() {
     private val implementation = FirebaseAuth()
 
     @PluginMethod
     public fun getClaims(call: PluginCall) {
         implementation.getClaims(call) { claimsSet ->
             val claims = JSObject()
-
             claimsSet.forEach {
                 claims.put(it, true)
             }

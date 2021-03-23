@@ -1,5 +1,6 @@
 package com.bazumax.capacitor.firebase.auth
 
+import android.util.Log
 import com.getcapacitor.PluginCall
 import com.google.firebase.auth.GetTokenResult
 import com.google.firebase.auth.ktx.auth
@@ -15,10 +16,7 @@ class FirebaseAuth {
         }
 
         user?.getIdToken(false)?.addOnSuccessListener {
-            @Override
-            fun onSuccess(result: GetTokenResult) {
-                success(result.claims.keys)
-            }
+            success(it.claims.keys)
         }
     }
 
